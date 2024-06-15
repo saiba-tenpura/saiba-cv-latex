@@ -73,16 +73,11 @@
 }
 
 % CV entry command
-
-% First argument for the leftmost date(s), second is for the bold entry, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
+% Params: (position, company, dates, loaction, content)
 \newcommand{\entry}[5]{
-  \begin{minipage}[t]{0.2\textwidth}
-    #1 %Leftmost entry date(s) text
-  \end{minipage}
-  \begin{minipage}[t]{0.75\textwidth}
-    \textbf{#2} \\ % Entry heading text
-    {\footnotesize \textbf{#3} \hfill \textbf{#4}} \\ % Subheading, Right-aligned entry qualifier text
-    #5 % Entry description text
-  \end{minipage}
-  \\\\
+  \textbf{#1} \\ % Entry heading text
+  \textbf{#2} \\ % Company name
+  {\footnotesize \icon{Calendar}\textbf{#3} \hfill \icon{MapMarker}\textbf{#4}} \\ % Subheading, Right-aligned entry qualifier text
+  #5 \\ % Entry description text
+  \\
 }
