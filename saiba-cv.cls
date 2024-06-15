@@ -27,8 +27,10 @@
 
 % Base Packages
 
-\usepackage{hyperref}
+\usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xstring}
 
 % Page Layout
 
@@ -48,15 +50,27 @@
 
 \usepackage{fontawesome} 
 
-% Command for outputting a fontawesome icon
+% Icon command
 \newcommand{\icon}[1]{% The first parameter is the FontAwesome icon name
 	\csname fa#1\endcsname
 	\hspace{0.75em}% Whitespace
 }
 
-% Dummy text
-
+% Dummy text command
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+% Contact details command
+% Params: (Email, Telephone number, Website, Github)
+% For the telephone link the whitespaces are stripped
+\newcommand{\contact}[4]{
+  \StrSubstitute{#2}{ }{}[\stripped]
+  \begin{itemize}[leftmargin=1em]
+    \item[] \href{mailto:#1}{\icon{Envelope}#1}
+    \item[] \href{tel:\stripped}{\icon{Phone}#2}
+    \item[] \href{https://#3}{\icon{Globe}#3}
+    \item[] \href{https://#4}{\icon{Github}#4}
+  \end{itemize}
+}
 
 % CV entry command
 
