@@ -51,16 +51,17 @@
 \usepackage{fontawesome} 
 
 % Icon command
-\newcommand{\icon}[1]{% The first parameter is the FontAwesome icon name
+% Params: (name)
+\newcommand{\icon}[1]{% The first parameter is the FontAwesome icon name without the 'fa'
 	\csname fa#1\endcsname
-	\hspace{0.75em}% Whitespace
+	\hspace{0.5em}% Whitespace
 }
 
 % Dummy text command
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
 % Contact details command
-% Params: (Email, Telephone number, Website, Github)
+% Params: (email, telephone number, website, github)
 % For the telephone link the whitespaces are stripped
 \newcommand{\contact}[4]{
   \StrSubstitute{#2}{ }{}[\stripped]
