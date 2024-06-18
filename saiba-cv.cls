@@ -46,6 +46,15 @@
 \usepackage[utf8]{inputenc} % Allow international characters
 \usepackage[T1]{fontenc} % Output font encoding
 
+\usepackage[default]{raleway}
+%\usepackage[defaultsans]{droidsans}
+%\usepackage{cmbright}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage{roboto}
+
+\renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
+
 % Icons
 
 \usepackage{fontawesome} 
