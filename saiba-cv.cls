@@ -28,9 +28,22 @@
 % Base Packages
 
 \usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{xstring}
+\usepackage{graphicx} % Allow the use of images
+\usepackage{hyperref} % Add hyperlinks
+\usepackage{xcolor} % Custom colors
+\usepackage{xkeyval} % Add key value options for class
+\usepackage{xstring} % Used for string modification
+
+% Custom params
+\define@key{saiba-cv.cls}{highlights}[59 130 246]{%
+  \definecolor{highlight-color}{RGB}{#1}%
+}
+
+\define@key{saiba-cv.cls}{muted}[113 113 122]{%
+  \definecolor{muted-color}{RGB}{#1}%
+}
+
+\ExecuteOptionsX{highlights,muted}
 
 % Page Layout
 
@@ -86,8 +99,8 @@
 % Params: (position, company, dates, loaction, content)
 \newcommand{\entry}[5]{
   \textbf{#1} \\ % Entry heading text
-  \textbf{#2} \\ % Company name
-  {\footnotesize \icon{Calendar}\textbf{#3} \hfill \icon{MapMarker}\textbf{#4}} \\ % Subheading, Right-aligned entry qualifier text
+  {\color{highlight-color} \textbf{#2}} \\ % Company name
+  {\color{muted-color} \footnotesize \icon{Calendar} \textbf{#3} \hfill \icon{MapMarker}\textbf{#4}} \\ % Subheading, Right-aligned entry qualifier text
   #5 \\ % Entry description text
   \\
 }
