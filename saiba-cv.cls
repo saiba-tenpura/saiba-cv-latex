@@ -43,7 +43,11 @@
   \definecolor{muted-color}{RGB}{#1}%
 }
 
-\ExecuteOptionsX{highlights,muted}
+\define@key{saiba-cv.cls}{sidebar}[24 24 27]{%
+  \definecolor{sidebar-color}{RGB}{#1}%
+}
+
+\ExecuteOptionsX{highlights, muted, sidebar}
 
 % Page Layout
 
@@ -81,6 +85,23 @@
 
 % Dummy text command
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+% Sidebar command
+\newcommand{\sidebar}[1]{
+  \colorbox{sidebar-color}{%
+    \begin{minipage}[c][\textheight][t]{0.225\textwidth}
+      \color{white}
+      #1
+    \end{minipage}
+  }%
+}
+
+% content section command
+\newcommand{\maincontent}[1]{
+  \begin{minipage}[c][\textheight][t]{0.725\textwidth}
+    #1
+  \end{minipage}
+}
 
 % Contact details command
 % Params: (email, telephone number, website, github)

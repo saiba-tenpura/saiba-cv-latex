@@ -6,35 +6,27 @@
 \author{Saiba Tenpura}
 \date{\today}
 
-% Define Colors
-\definecolor{zinc-900}{HTML}{18181b}
-
 % Content
 \begin{document}
 
 % Sidebar Section - Contact Details
+\sidebar{
+  \vspace{0.5cm}
+  \centering\includegraphics[height=8em]{logo.png}
+  \vspace{0.5cm}
 
-\colorbox{zinc-900}{%
-  \begin{minipage}[c][\textheight][t]{0.225\textwidth}
-    \color{white}
-    \vspace{0.5cm}
-    \centering\includegraphics[height=8em]{logo.png}
-    \vspace{0.5cm}
+  {\Large \textbf{Saiba Tenupra}} \\
+  {\large Full Stack Developer}
 
-    {\Large \textbf{Saiba Tenpura}} \\
-    {\large Full Stack Developer}
-
-    \section*{Contact Details}
-    \contact
-      {saiba@email.com}
-      {+49 123 4567 89}
-      {saiba.tenpura.me}
-      {github.com/saiba-tenpura}
-
-  \end{minipage}
-}%
-\hspace{0.25cm}
-\begin{minipage}[c][\textheight][t]{0.725\textwidth}
+  \section*{Contact Details}
+  \contact
+    {saiba@email.com}
+    {+49 123 4567 89}
+    {saiba.tenpura.me}
+    {github.com/saiba-tenpura}
+}
+\hspace{0.12cm}
+\maincontent{
   \vspace{0.5cm}
   % Skill Section
   \section*{Skills}
@@ -106,7 +98,6 @@
     {09/2008 -- 07/2015}
     {Close}
     {\lorem}
-
-\end{minipage}
+}
 
 \end{document}
