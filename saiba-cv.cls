@@ -29,7 +29,7 @@
 
 \usepackage{enumitem}
 \usepackage{graphicx} % Allow the use of images
-\usepackage{hyperref} % Add hyperlinks
+\usepackage[hidelinks]{hyperref} % Add hyperlinks
 \usepackage{xcolor} % Custom colors
 \usepackage{xkeyval} % Add key value options for class
 \usepackage{xstring} % Used for string modification
