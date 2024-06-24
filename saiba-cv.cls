@@ -105,14 +105,15 @@
 
 % Contact details command
 % Params: (email, telephone number, website, github)
-% For the telephone link the whitespaces are stripped
+% For the telephone link the whitespaces are automatically stripped
+% Blank values will not be displayed
 \newcommand{\contact}[4]{
   \StrSubstitute{#2}{ }{}[\stripped]
-  \begin{itemize}[leftmargin=1em]
-    \item[] \href{mailto:#1}{\icon{Envelope}#1}
-    \item[] \href{tel:\stripped}{\icon{Phone}#2}
-    \item[] \href{https://#3}{\icon{Globe}#3}
-    \item[] \href{https://#4}{\icon{Github}#4}
+  \begin{itemize}
+    \notblank{#1}{\item[] \href{mailto:#1}{\icon{Envelope}#1}}{}
+    \notblank{#2}{\item[] \href{tel:\stripped}{\icon{Phone}#2}}{}
+    \notblank{#3}{\item[] \href{https://#3}{\icon{Globe}#3}}{}
+    \notblank{#4}{\item[] \href{https://#4}{\icon{Github}#4}}{}
   \end{itemize}
 }
 
