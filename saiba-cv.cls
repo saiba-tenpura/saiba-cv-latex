@@ -28,6 +28,7 @@
 % Base Packages
 
 \usepackage{enumitem}
+\usepackage{etoolbox}
 \usepackage{graphicx} % Allow the use of images
 \usepackage[hidelinks]{hyperref} % Add hyperlinks
 \usepackage{xcolor} % Custom colors
@@ -35,6 +36,10 @@
 \usepackage{xstring} % Used for string modification
 
 % Custom params
+\define@key{saiba-cv.cls}{header}[24 24 27]{%
+  \definecolor{header-color}{RGB}{#1}%
+}
+
 \define@key{saiba-cv.cls}{highlights}[59 130 246]{%
   \definecolor{highlight-color}{RGB}{#1}%
 }
@@ -47,7 +52,7 @@
   \definecolor{sidebar-color}{RGB}{#1}%
 }
 
-\ExecuteOptionsX{highlights, muted, sidebar}
+\ExecuteOptionsX{header, highlights, muted, sidebar}
 
 % Page Layout
 
@@ -89,18 +94,25 @@
 % Sidebar command
 \newcommand{\sidebar}[1]{
   \colorbox{sidebar-color}{%
-    \begin{minipage}[c][\textheight][t]{0.225\textwidth}
+    \begin{minipage}[c][\textheight][t]{0.26\textwidth}
       \color{white}
       #1
     \end{minipage}
   }%
 }
 
+% Header command
+\newcommand{\header}[1]{
+  \colorbox{header-color}{%
+    \color{white}
+    #1
+  }%
+}
+
 % content section command
 \newcommand{\maincontent}[1]{
-  \begin{minipage}[c][\textheight][t]{0.725\textwidth}
-    #1
-  \end{minipage}
+  \pagecolor{white}
+  #1
 }
 
 % Contact details command

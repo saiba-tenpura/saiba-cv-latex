@@ -1,0 +1,118 @@
+\documentclass[9pt]{saiba-cv}
+\graphicspath{{./images/}}
+
+% Author
+\title{Saiba Curriculum Vitae}
+\author{Saiba Tenpura}
+\date{\today}
+
+% Content
+\begin{document}
+
+% Header Section - Contact Details
+\header{%
+  \begin{minipage}[c]{0.2\textwidth}
+    \vspace{0.5em}
+    \centering\includegraphics[height=8em]{logo.png}
+    \vspace{0.5em}
+  \end{minipage}%
+  \begin{minipage}[c]{0.2\textwidth}
+    {\Large \textbf{Saiba Tenpura}} \\
+    {\large Full Stack Developer}
+  \end{minipage}%
+  \begin{minipage}[c]{0.225\textwidth}%
+    \contact
+      {saiba@email.com}
+      {+49 123 4567 89}
+      {}
+      {}
+  \end{minipage}
+  \begin{minipage}[c]{0.375\textwidth}%
+    \contact
+      {}
+      {}
+      {saiba.tenpura.me}
+      {github.com/saiba-tenpura}
+  \end{minipage}
+}%
+
+\makebox[\textwidth][c]{
+  \begin{minipage}{0.85\textwidth}
+    \maincontent{%
+      \vspace{1em}
+      % Skill Section
+      \section*{Skills}
+      \begin{itemize}[leftmargin=0em]
+        \item[] \textbf{Frontend:} HTML, CSS, JavaScript, TypeScript, Tailwind, Nuxt, Vue.js, Next.js, Bootstrap, NPM
+        \item[] \textbf{Backend:} PHP, Laravel, MySQL, Bash, Traefik, Python, Powershell
+        \item[] \textbf{DevOps:} Git, Ansible, Docker, Jenkins
+        \item[] \textbf{Miscellaneous:} Blender, Gimp, Godot, Inkscape, LaTeX
+      \end{itemize}
+
+      % Work Experience
+  
+      \section*{Work Experience}
+      \entry
+        {Full Stack Developer}
+        {Corporation Inc.}
+        {12/2015\ --\ Present}
+        {Somewhere}
+        {\begin{itemize}[leftmargin=1em,topsep=0em]
+          \item \lorem
+          \item \lorem
+          \item \lorem
+          \item \lorem
+        \end{itemize}}
+  
+      % Internships
+  
+      \section*{Internships}
+      \entry
+        {Software Developer}
+        {DotCom Inc.}
+        {04/2015 -- 05/2015}
+        {Else}
+        {\begin{itemize}[leftmargin=1em,topsep=0em]
+          \item \lorem
+          \item \lorem \\
+        \end{itemize}}
+  
+      \entry
+        {Web Developer}
+        {Famous Inc.}
+        {05/2014 -- 06/2014}
+        {Far Away}
+        {\begin{itemize}[leftmargin=1em,topsep=0em]
+          \item \lorem
+          \item \lorem
+        \end{itemize}}
+  
+      % Education
+  
+      \section*{Education}
+      \entry
+        {Vocational Training}
+        {Vocational School}
+        {09/2013 -- 07/2016}
+        {Far Away}
+        {\lorem}
+  
+      \entry
+        {Highschool Diploma}
+        {Not So Highschool}
+        {09/2013 -- 07/2015}
+        {Not So Close}
+        {\lorem}
+  
+      \entry
+        {Secondary School Certificate}
+        {First School}
+        {09/2008 -- 07/2015}
+        {Close}
+        {\lorem}
+
+    }
+  \end{minipage}
+}
+
+\end{document}
