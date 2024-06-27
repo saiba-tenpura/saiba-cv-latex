@@ -20,10 +20,10 @@
 
 % Document Config
 
-\setlength{\topskip}{0cm}
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{0cm}
-\setlength{\fboxsep}{0cm}
+\setlength{\topskip}{0em}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
+\setlength{\fboxsep}{0em}
 
 % Base Packages
 
@@ -60,7 +60,7 @@
 
 \geometry{
   paper=a4paper,
-  margin=0cm,
+  margin=0em,
 }
 
 % Fonts
@@ -121,7 +121,7 @@
 % Blank values will not be displayed
 \newcommand{\contact}[4]{
   \StrSubstitute{#2}{ }{}[\stripped]
-  \begin{itemize}
+  \begin{itemize}[leftmargin=1.5em]
     \notblank{#1}{\item[] \href{mailto:#1}{\icon{Envelope}#1}}{}
     \notblank{#2}{\item[] \href{tel:\stripped}{\icon{Phone}#2}}{}
     \notblank{#3}{\item[] \href{https://#3}{\icon{Globe}#3}}{}
