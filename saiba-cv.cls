@@ -52,7 +52,11 @@
   \definecolor{sidebar-color}{RGB}{#1}%
 }
 
-\ExecuteOptionsX{header, highlights, muted, sidebar}
+\define@key{saiba-cv.cls}{background}[24 24 27]{%
+  \definecolor{background-color}{RGB}{#1}%
+}
+
+\ExecuteOptionsX{background, header, highlights, muted, sidebar}
 
 % Page Layout
 
@@ -104,6 +108,14 @@
 % Header command
 \newcommand{\header}[1]{
   \colorbox{header-color}{%
+    \color{white}
+    #1
+  }%
+}
+
+% Command for section with background
+\newcommand{\cvbackground}[1]{
+  \colorbox{background-color}{%
     \color{white}
     #1
   }%
