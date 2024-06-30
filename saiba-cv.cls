@@ -36,8 +36,12 @@
 \usepackage{xstring} % Used for string modification
 
 % Custom params
-\define@key{saiba-cv.cls}{header}[24 24 27]{%
-  \definecolor{header-color}{RGB}{#1}%
+\define@key{saiba-cv.cls}{background}[24 24 27]{%
+  \definecolor{background-color}{RGB}{#1}%
+}
+
+\define@key{saiba-cv.cls}{content}[24 24 27]{%
+  \definecolor{content-color}{RGB}{#1}%
 }
 
 \define@key{saiba-cv.cls}{highlights}[59 130 246]{%
@@ -48,15 +52,7 @@
   \definecolor{muted-color}{RGB}{#1}%
 }
 
-\define@key{saiba-cv.cls}{sidebar}[24 24 27]{%
-  \definecolor{sidebar-color}{RGB}{#1}%
-}
-
-\define@key{saiba-cv.cls}{background}[24 24 27]{%
-  \definecolor{background-color}{RGB}{#1}%
-}
-
-\ExecuteOptionsX{background, header, highlights, muted, sidebar}
+\ExecuteOptionsX{background, content, highlights, muted}
 
 % Page Layout
 
@@ -95,36 +91,16 @@
 % Dummy text command
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
-% Sidebar command
-\newcommand{\sidebar}[1]{
-  \colorbox{sidebar-color}{%
-    \begin{minipage}[c][\textheight][t]{0.26\textwidth}
-      \color{white}
-      #1
-    \end{minipage}
-  }%
-}
-
-% Header command
-\newcommand{\header}[1]{
-  \colorbox{header-color}{%
-    \color{white}
-    #1
-  }%
-}
-
 % Command for section with background
 \newcommand{\cvbackground}[1]{
-  \colorbox{background-color}{%
-    \color{white}
-    #1
-  }%
+  \colorbox{background-color}{
+    \color{white}#1
+  }
 }
 
 % content section command
 \newcommand{\maincontent}[1]{
-  \pagecolor{white}
-  #1
+  \pagecolor{white}\color{content-color}#1
 }
 
 % Contact details command
