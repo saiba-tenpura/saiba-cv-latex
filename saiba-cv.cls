@@ -20,10 +20,10 @@
 
 % Document Config
 
-\setlength{\topskip}{0em}
+\setlength{\fboxsep}{0em}
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0em}
-\setlength{\fboxsep}{0em}
+\setlength{\topskip}{0em}
 
 % Base Packages
 
@@ -69,6 +69,7 @@
 \usepackage[T1]{fontenc} % Output font encoding
 
 \usepackage[default]{raleway}
+
 %\usepackage[defaultsans]{droidsans}
 %\usepackage{cmbright}
 %\usepackage{fetamont}
@@ -78,7 +79,6 @@
 \renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
 
 % Icons
-
 \usepackage{fontawesome} 
 
 % Icon command
@@ -109,7 +109,7 @@
 % Blank values will not be displayed
 \newcommand{\contact}[4]{
   \StrSubstitute{#2}{ }{}[\stripped]
-  \begin{itemize}[leftmargin=1.5em]
+  \begin{itemize}[leftmargin=1em]
     \notblank{#1}{\item[] \href{mailto:#1}{\icon{Envelope}#1}}{}
     \notblank{#2}{\item[] \href{tel:\stripped}{\icon{Phone}#2}}{}
     \notblank{#3}{\item[] \href{https://#3}{\icon{Globe}#3}}{}
@@ -122,7 +122,6 @@
 \newcommand{\entry}[5]{
   \textbf{#1} \\ % Entry heading text
   {\color{highlight-color} \textbf{#2}} \\ % Company name
-  {\color{muted-color} \footnotesize \icon{Calendar} \textbf{#3} \hfill \icon{MapMarker}\textbf{#4}} \\ % Subheading, Right-aligned entry qualifier text
-  #5 \\ % Entry description text
-  \\
+  {\color{muted-color} \footnotesize \icon{Calendar}\textbf{#3} \hfill \icon{MapMarker}\textbf{#4}} \\ % Subheading, Right-aligned entry qualifier text
+  #5 \\% Entry description text
 }
