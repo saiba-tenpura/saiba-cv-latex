@@ -123,5 +123,5 @@
   \textbf{#1} \\ % Entry heading text
   {\color{highlight-color} \textbf{#2}} \\ % Company name
   {\color{muted-color} \footnotesize \icon{Calendar}\textbf{#3} \hfill \icon{MapMarker}\textbf{#4}} \\ % Subheading, Right-aligned entry qualifier text
-  #5 \\% Entry description text
+  #5 \\ % Entry description text
 }
